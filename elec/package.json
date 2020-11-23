@@ -1,0 +1,14 @@
+{
+  "name": "elec",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "lipeiv",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.5"
+  }
+}
