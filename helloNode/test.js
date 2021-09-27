@@ -1,14 +1,16 @@
-var http = require("http")
+const http = require("http")
 
-var server = http.createServer()
+const hostname = '127.0.0.1'
+const port = 3000
 
-server.on('request', function(request, response) {
-	console.log("请求路径:" + request.url)
-
-	response.write("Hello <nbs>"+request.toString())
-	response.end("end")
+const server = http.createServer((req,res) => {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/plain')
+  res.end('Hello World!\n')
 })
 
-server.listen(3000, function() {
-	console.log("服务已开启")
+
+
+server.listen(port, hostname, () => {
+  console.log(`服务器运行在 http://${hostname}:${port}/`)
 })
