@@ -1,1 +1,5 @@
-大家好，我是node.js
+//大家好,我是node.js
+
+const a = 3;
+
+console.log(a);
