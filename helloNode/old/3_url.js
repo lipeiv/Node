@@ -13,6 +13,8 @@ server.on('request',function(req,res){
 	}
 })
 
+
+
 server.listen(80,function(){
 	console.log('服务器启动成功了')
 })
