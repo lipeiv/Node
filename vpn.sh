@@ -10,16 +10,20 @@ ssh -i lipeiv.pem ec2-user@18.162.244.12
  make
  sudo make install
  sudo vim /etc/systemd/system/vpnserver.service
+ 
  cd ../
  sudo mv v4.32-9731 /opt/vpnserver
  sudo chmod 755 /etc/systemd/system/vpnserver.service
+ 
  sudo systemctl daemon-reload
  sudo systemctl start vpnserver
  sudo systemctl enable vpnserver
+ 
  sudo vpncmd
  sudo systemctl start vpnserver
  service vpnserver status
  sudo systemctl enable vpnserver
+ 
  vpnserver start
  vpnbridge start
  vpnclient start
